@@ -1,0 +1,67 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+  margin: 8px;
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #3d4756;
+  padding: 5px;
+  border: none ;
+  border-radius :5px;
+}
+
+header >p {
+  text-transform: uppercase;
+  font-size: 50px;
+  font-weight:1000;
+  color: #fff;
+  margin: auto;
+}
+
+header > select{
+  margin: auto;
+  font-size: 20px;
+  padding: 3px;
+  border: none;
+  border-radius: 3px;
+}
+
+main {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: max-content;
+  grid-auto-flow: row dense;
+  grid-gap: 1em;
+  background-color: #d5dae2;
+  padding: 5px;
+  color: #B2EBF2;
+}
+
+.article{
+  background: #3d4756;
+  padding: 10px;
+  border: none ;
+  border-radius :5px;
+}
+
+.article h3 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #ffffff;
+}
+
+.article a,
+.article a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.article img {
+  width: 100%;
+}
