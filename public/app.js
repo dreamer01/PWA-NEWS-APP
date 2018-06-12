@@ -1,5 +1,7 @@
 const apiKey = 'e94a68aeda80448fb69bd7c5b6ea2aa3';
+const defaultCategory = 'general';
 const defaultSource = 'google-news-in';
+const categorySelector = document.querySelector('#category');
 const sourceSelector = document.querySelector('#sources');
 const newsArticles = document.querySelector('main');
 
@@ -12,6 +14,7 @@ if ('serviceWorker' in navigator) {
 
 window.addEventListener('load', e => {
   sourceSelector.addEventListener('change', evt => updateNews(evt.target.value));
+  categorySelector.addEventListener('change', ()=> updateNewsSources());
   updateNewsSources().then(() => {
     sourceSelector.value = defaultSource;
     updateNews();
@@ -25,7 +28,11 @@ async function updateNewsSources() {
   const json = await response.json();
   sourceSelector.innerHTML =
     json.sources
-      .map(source => `<option value="${source.id}">${source.name}</option>`)
+      .map(source => {
+        if(source.category == categorySelector.value){
+          return `<option value="${source.id}">${source.name}</option>`
+        }
+      })
       .join('\n');
 }
 
