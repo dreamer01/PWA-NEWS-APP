@@ -1,4 +1,4 @@
-const apiKey = 'e94a68aeda80448fb69bd7c5b6ea2aa3';
+const apiKey = 'XXXXXXXX_XXXXXXXXXX_XXXXXXXXXXXX';
 const defaultCategory = 'general';
 const defaultSource = 'google-news-in';
 const categorySelector = document.querySelector('#category');
